@@ -14,13 +14,13 @@ namespace ProjectAfishaBot
     {
         public TelegramBotClient Token()
         {
-            string readKey = System.IO.File.ReadAllText(@"D:\other\[OTUS] C# Базовый курс (08-2021)\Проектная работа\Telegtam-token.txt");
+            string readKey = System.IO.File.ReadAllText(@"путь к файлу\Telegtam-token.txt");
             return new TelegramBotClient(readKey);
         }
 
         public HttpClient HttpClientMethod()
         {
-            string readKey = System.IO.File.ReadAllText(@"D:\other\[OTUS] C# Базовый курс (08-2021)\Проектная работа\API-key.txt");
+            string readKey = System.IO.File.ReadAllText(@"путь к файлу\API-key.txt");
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", readKey);
             return client;
